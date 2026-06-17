@@ -1,0 +1,260 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f172a; /* keep dark background */
+  color: #f8fafc; /* light text */
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  padding-top: 70px; /* offset for fixed header */
+  margin-bottom: 70px; /* offset for sticky footer */
+}
+
+/* Fixed header / navbar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #1e293b;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #3b82f6;
+}
+
+/* Bio section */
+#bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 4rem 10%;
+  text-align: center;
+}
+
+.images img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Gallery styling */
+.gallery {
+  margin: 4rem 10%;
+  text-align: center;
+}
+
+.gallery h2 {
+  color: #f8fafc;
+  margin-bottom: 2rem;
+}
+
+.gallery .images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, max-content));
+  gap: 1rem;
+  justify-content: center;
+  justify-items: center;
+}
+
+.gallery .images img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery .images img:hover {
+  transform: scale(1.05);
+}
+
+.bio {
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+
+.bio a {
+  color: #3b82f6;
+}
+
+/* Education */
+.education {
+  margin: 2rem 10%;
+}
+
+.table-scoped {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e293b;
+}
+
+.table-scoped th, .table-scoped td {
+  padding: 0.5rem;
+  border: 1px solid #334155;
+}
+
+.table-scoped th {
+  background-color: #0f172a;
+  color: #94a3b8;
+}
+
+/* Skills */
+.skills {
+  margin: 2rem 10%;
+  padding: 1rem;
+  background-color: #1e293b;
+}
+
+.skills h1 {
+  color: #f8fafc;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.skills div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #334155;
+}
+
+.skills div:last-child {
+  border-bottom: none;
+}
+
+.skills div h2 {
+  color: #cbd5e1;
+}
+
+/* Shipping */
+.shipping {
+  margin: 2rem 10%;
+  text-align: center;
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.shipping h2 {
+  color: #f8fafc;
+  margin-bottom: 1rem;
+}
+
+.shipping p {
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+}
+
+.shipping ul {
+  list-style: none;
+  display: inline-block;
+  text-align: left;
+  color: #cbd5e1;
+}
+
+.shipping li {
+  margin-bottom: 0.5rem;
+}
+
+/* Contact */
+section#contact {
+  margin: 2rem 10%;
+  text-align: center;
+}
+
+section#contact h2 {
+  color: #f8fafc;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #1e293b;
+  padding: 1rem;
+}
+
+form label {
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #334155;
+}
+
+form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #2563eb;
+}
+
+/* Sticky footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1e293b;
+  color: #94a3b8;
+  text-align: center;
+  padding: 0.75rem 0;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.3);
+}
+
+/* Simple responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  #bio {
+    margin: 2rem 5%;
+  }
+  .skills div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
