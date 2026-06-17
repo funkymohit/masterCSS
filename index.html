@@ -10,18 +10,26 @@
     <header>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Contact</li>
-                <li>About</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#product">Products</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#ShippingInformation">Shipping Information</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="bio">
-            <h1>Products</h1>
+        <section class="bio" id="product">
+            <h1>Products </h1> <div id="products">
+            <img src="images/gun1.jpg" alt="image" width="180" height="120">
+            <img src="images/gun2.jpg" alt="image" width="180" height="120">
+            <img src="images/gun3.jpg" alt="image" width="180" height="120">
+            <img src="images/gun4.jpg" alt="image" width="180" height="120">
+            <img src="images/gun5.jpg" alt="image" width="180" height="120">
+            </div>
         </section>
-        <section class="gallery">
+        <section id="gallery" class="gallery">
             <h2>Gallery</h2>
             <div class="images">
                 <img src="images/photo1.jpg" alt="image">
@@ -31,7 +39,7 @@
                 <img src="images/photo5.jpg" alt="image">
             </div>
         </section>
-        <section id="contact">
+        <section id="contact" class="contact">
             <h1>Contact</h1>
             <form action="POST">
                 <label for="">Name</label>
@@ -42,7 +50,7 @@
                 <input type="Query">
             </form>
         </section>
-        <section class="shipping">
+        <section id="ShippingInformation" class="shipping">
             <h2>Shipping Information</h2>
             <p>We offer standard shipping on all orders. Items are dispatched within 1-2 business days.</p>
             <ul>
